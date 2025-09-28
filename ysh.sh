@@ -20,6 +20,12 @@ function respond() {
         "hi"|"hello")
             echo "Hi! How can I assist you?"
             ;;
+        "time")
+            echo "Current time: $(date +%H:%M:%S)"
+            ;;
+        "date")
+            echo "Today's date: $(date '+%A, %d %B %Y')"
+            ;;
         "exit")
             echo "Exiting ysh. See you next time!"
             exit 0
@@ -36,5 +42,3 @@ while true; do
     read -p "user@pc : " user_input
     respond "$user_input"
 done
-
-
